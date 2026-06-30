@@ -9,24 +9,27 @@ const CustomerProblem = ({ ticket }) => {
     <div>
       <h1 className="text-2xl font-bold mb-4">Customer Tickets</h1>
 
-      {
+     <div className="grid grid-cols-2 gap-5">
+       {
         ticketsData.map((customer) =>(
           <div>
-        <div key={customer.id} className=" bg-white p-3 mb-5 rounded-xl shadow-md">
+        <div key={customer.id} className=" bg-white p-3 rounded-xl shadow-md flex flex-col justify-between gap-5 h-full">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold">
+            <h1 className="text-xl font-semibold flex-1">
             {customer.title}
             </h1>
-            <div className="border-2 px-3 py-1 font-semibold rounded-3xl flex items-center gap-2">
+            <div className={`px-3 py-1 font-semibold rounded-3xl flex items-center gap-2 
+              ${customer.status === "Open" ? "open-green-bg" : "progress-bg"}
+              `}>
               <span className="w-3 h-3 rounded-2xl bg-black"></span>
               <p>{customer.status}</p>
             </div>
           </div>
-          <p className="mt-2 mb-2 text-gray-500">
+          <p className="text-gray-500">
           {customer.description}
           </p>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center">
             <div className="flex gap-3">
               <p className="font-semibold text-gray-500">{customer.id}</p>
               <p className="font-semibold text-gray-500">{customer.priority}</p>
@@ -42,6 +45,7 @@ const CustomerProblem = ({ ticket }) => {
         ))
       }
 
+     </div>
 
       
     </div>

@@ -15,18 +15,18 @@ function App() {
     <>
       <Navbar></Navbar>
       <Hero></Hero>
-      <div className="w-11/12 mx-auto grid grid-cols-2 ">
-        <div className="border-2">
+      <div className="w-11/12 mx-auto grid grid-cols-5 gap-3 mt-10">
+        <div className="col-span-4">
           <CustomerProblem ticket={promise}></CustomerProblem>
         </div>
-        <div className="border-2">
-          <div>
+        <div className="px-2">
+          <div className="mb-2">
             <h1 className="text-2xl font-bold">Task Status</h1>
-            <p>Select a ticket to add to Task Status.</p>
+            <p className="text-gray-500">Select a ticket to add to Task Status.</p>
           </div>
           <div>
             <h1 className="text-2xl font-bold">Resolved Task</h1>
-            <p>No resolved tasks yet.</p>
+            <p className="text-gray-500">No resolved tasks yet.</p>
           </div>
         </div>
       </div>

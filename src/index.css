@@ -23,17 +23,20 @@ body {
   color: #0b5e06;
 }
 .open-green-bg {
-  color: #b9f8cf;
+  background-color: #b9f8cf;
 }
 .open-dot-green {
   color: #02a53b;
 }
 .progress-bg {
-  color: #f8f3b9;
+  background-color: #f8f3b9;
 }
 .progress-font {
   color: #9c7700;
 }
 .progress-dot {
   color: #febb0c;
+}
+.red{
+  color: #F83044;
 }
