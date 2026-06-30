@@ -2,19 +2,38 @@
 
 @plugin "daisyui";
 
+body {
+  background-color: ghostwhite;
+}
+
 .btn-gradient {
   background: linear-gradient(to right, #632ee3, #9f62f2);
   transition: all 0.3s ease-out;
 }
 .btn-gradient:hover {
-  /* background: linear-gradient(to right,#9f62f2,#632ee3); */
-
   transform: scale(1.2);
 }
 .hero-gradient {
   background: linear-gradient(to right, #632ee3, #9f62f2);
 }
 .hero-gradient2 {
-  background: linear-gradient(to right, #54CF68, #00827A);
+  background: linear-gradient(to right, #54cf68, #00827a);
 }
-
+.open-green {
+  color: #0b5e06;
+}
+.open-green-bg {
+  color: #b9f8cf;
+}
+.open-dot-green {
+  color: #02a53b;
+}
+.progress-bg {
+  color: #f8f3b9;
+}
+.progress-font {
+  color: #9c7700;
+}
+.progress-dot {
+  color: #febb0c;
+}

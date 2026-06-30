@@ -21,7 +21,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className="relative items-center justify-center flex w-full  md:w-1/2 hero-gradient2 rounded-2xl">
+        <div className="relative items-center justify-center flex w-full md:w-1/2 hero-gradient2 rounded-2xl">
           <img
             src={HeroImg}
             alt="hero-design"

@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="bg-[ghostwhite]">
+    <div className="bg-white">
       {/* navbar design */}
       <div className="navbar w-11/12 mx-auto flex flex-col md:flex-row justify-between">
         <div className="flex mb-7 md:mb-0">
