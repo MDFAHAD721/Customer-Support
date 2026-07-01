@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 import "./App.css";
 import Navbar from "./Navbar/Navbar";
 import Hero from "./Hero/Hero";
@@ -48,6 +49,8 @@ function App() {
           ></TaskStatus>
         </div>
       </div>
+
+      <ToastContainer></ToastContainer>
     </>
   );
 }

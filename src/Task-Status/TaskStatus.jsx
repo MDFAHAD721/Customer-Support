@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 const TaskStatus = ({
   selectedTicket,
   setResolvedCard,
@@ -15,6 +16,7 @@ const TaskStatus = ({
     setSelectedTicket((prevTicket) =>
       prevTicket.filter((item) => item.id !== ticket.id),
     );
+    toast(`"${ticket.title}" has been marked as completed!`,)
   };
 
   return (
