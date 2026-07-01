@@ -26,7 +26,7 @@ body {
   background-color: #b9f8cf;
 }
 .open-dot-green {
-  color: #02a53b;
+  background-color: #02a53b;
 }
 .progress-bg {
   background-color: #f8f3b9;
@@ -35,7 +35,7 @@ body {
   color: #9c7700;
 }
 .progress-dot {
-  color: #febb0c;
+  background-color: #febb0c;
 }
 .red{
   color: #F83044;
