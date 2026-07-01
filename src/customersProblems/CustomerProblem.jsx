@@ -1,17 +1,34 @@
 import { use } from "react";
 import { MdOutlineDateRange } from "react-icons/md";
-const CustomerProblem = ({ ticket }) => {
+const CustomerProblem = ({
+  ticket,
+  setInProgressCount,
+  clickedCard,
+  setClickedCard,
+  setSelectedTicket,
+}) => {
   const ticketsData = use(ticket);
-  console.log(ticket.value);
+
+  const handleCardClick = (customer) => {
+    if (clickedCard.includes(customer.id)) return;
+    setSelectedTicket((prevSelectedTicket) => [
+      ...prevSelectedTicket,
+      customer,
+    ]);
+    setClickedCard((prevClickedCards) => [...prevClickedCards, customer.id]);
+    setInProgressCount((prevCount) => prevCount + 1);
+  };
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">Customer Tickets</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {ticketsData.map((customer) => (
-          <div>
+          <div key={customer.id}>
             <div
-              key={customer.id}
+              onClick={() => {
+                handleCardClick(customer);
+              }}
               className=" bg-white p-3 rounded-xl shadow-md flex flex-col justify-between gap-5 h-full"
             >
               <div className="flex justify-between items-center">
