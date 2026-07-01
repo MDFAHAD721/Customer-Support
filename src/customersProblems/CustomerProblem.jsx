@@ -26,7 +26,13 @@ const CustomerProblem = ({ ticket }) => {
                   <span
                     className={`w-3 h-3 rounded-2xl ${customer.status === "Open" ? "open-dot-green" : "progress-dot"}`}
                   ></span>
-                  <p className={customer.status === "Open" ? "open-green" : "progress-font"}>
+                  <p
+                    className={
+                      customer.status === "Open"
+                        ? "open-green"
+                        : "progress-font"
+                    }
+                  >
                     {customer.status}
                   </p>
                 </div>
@@ -36,7 +42,9 @@ const CustomerProblem = ({ ticket }) => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-3">
                   <p className="font-semibold text-gray-500">{customer.id}</p>
-                  <p className="font-semibold text-gray-500">
+                  <p
+                    className={`font-semibold ${customer.priority === "LOW PRIORITY" ? "text-[#02a53b]" : customer.priority === "MEDIUM PRIORITY" ? "text-[#febb0c]" : "text-[#ff0000]"}`}
+                  >
                     {customer.priority}
                   </p>
                 </div>
