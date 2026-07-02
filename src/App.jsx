@@ -19,6 +19,7 @@ function App() {
   const [clickedCard, setClickedCard] = useState([]);
   const [selectedTicket, setSelectedTicket] = useState([]);
   const [resolvedTicket, setResolvedTicket] = useState([]);
+  const[removedTicket, setRemovedTicket] = useState([]);
   return (
     <>
       <Navbar></Navbar>
@@ -35,6 +36,7 @@ function App() {
             clickedCard={clickedCard}
             setClickedCard={setClickedCard}
             setSelectedTicket={setSelectedTicket}
+            removedTicket={removedTicket}
           ></CustomerProblem>
         </div>
         {/* 2nd part */}
@@ -46,6 +48,7 @@ function App() {
             setResolvedTicket={setResolvedTicket}
             setInProgressCount={setInProgressCount}
             setSelectedTicket={setSelectedTicket}
+            setRemovedTicket={setRemovedTicket}
           ></TaskStatus>
         </div>
       </div>

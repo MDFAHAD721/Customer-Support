@@ -1,4 +1,5 @@
 import { use } from "react";
+import { toast } from "react-toastify";
 import { MdOutlineDateRange } from "react-icons/md";
 const CustomerProblem = ({
   ticket,
@@ -6,6 +7,7 @@ const CustomerProblem = ({
   clickedCard,
   setClickedCard,
   setSelectedTicket,
+  removedTicket
 }) => {
   const ticketsData = use(ticket);
 
@@ -17,13 +19,14 @@ const CustomerProblem = ({
     ]);
     setClickedCard((prevClickedCards) => [...prevClickedCards, customer.id]);
     setInProgressCount((prevCount) => prevCount + 1);
+    toast(`"${customer.title}" has been added to the Task Status`);
   };
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">Customer Tickets</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {ticketsData.map((customer) => (
+        {ticketsData.filter((customer) => !removedTicket.includes(customer.id)).map((customer) => (
           <div key={customer.id}>
             <div
               onClick={() => {

@@ -6,17 +6,19 @@ const TaskStatus = ({
   setResolvedTicket,
   setInProgressCount,
   setSelectedTicket,
+  setRemovedTicket,
 }) => {
   const handleComplete = (ticket) => {
     setResolvedCard((prev) => prev + 1);
 
     setInProgressCount((prevCount) => prevCount - 1);
     setResolvedTicket((prev) => [...prev, ticket]);
+    setRemovedTicket((prev) => [...prev, ticket.id]);
 
     setSelectedTicket((prevTicket) =>
       prevTicket.filter((item) => item.id !== ticket.id),
     );
-    toast(`"${ticket.title}" has been marked as completed!`,)
+    toast(`"${ticket.title}" has been marked as completed!`);
   };
 
   return (
