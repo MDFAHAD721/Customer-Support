@@ -25,7 +25,7 @@ const CustomerProblem = ({
     <div>
       <h1 className="text-2xl font-bold mb-4">Customer Tickets</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {ticketsData.filter((customer) => !removedTicket.includes(customer.id)).map((customer) => (
           <div key={customer.id}>
             <div

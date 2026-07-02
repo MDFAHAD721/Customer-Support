@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 import "./App.css";
 import Navbar from "./Navbar/Navbar";
 import Hero from "./Hero/Hero";
 import CustomerProblem from "./customersProblems/CustomerProblem";
 import TaskStatus from "./Task-Status/TaskStatus";
+import Footer from "./Footer/Footer";
 
 const ticket = async () => {
   const res = await fetch("/customersData.json");
@@ -19,7 +20,7 @@ function App() {
   const [clickedCard, setClickedCard] = useState([]);
   const [selectedTicket, setSelectedTicket] = useState([]);
   const [resolvedTicket, setResolvedTicket] = useState([]);
-  const[removedTicket, setRemovedTicket] = useState([]);
+  const [removedTicket, setRemovedTicket] = useState([]);
   return (
     <>
       <Navbar></Navbar>
@@ -52,7 +53,7 @@ function App() {
           ></TaskStatus>
         </div>
       </div>
-
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
     </>
   );
